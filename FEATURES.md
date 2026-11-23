@@ -6,19 +6,19 @@ Complete the original command suite in Rust with Poise/Serenity and Discord Comp
 ## Phase 0 — Foundation and build verification
 - [ ] Verify Rust toolchain and dependency compatibility; compile and resolve current errors.
 - [ ] Establish project module structure and command registration.
-- [ ] Centralize Components V2 layouts, error messages, pagination, buttons, modals and select menus.
-- [ ] Configuration loading, validation, secret handling and startup diagnostics.
-- [ ] Logging, error boundaries, cooldowns and rate-limit handling.
+- [x] Centralize the base Components V2 Container/TextDisplay layout helper.\n- [ ] Extend helper with pagination, buttons, modals and select menus.
+- [x] Configuration loading, token validation and startup diagnostics.
+- [x] Structured logging foundation.\n- [ ] Error boundaries, cooldowns and rate-limit handling.
 - [ ] Test strategy (unit tests, mock API tests, command smoke tests).
 
 ## Phase 1 — Core, persistence and command UX
-- [ ] Database/persistence layer and migrations.
+- [x] SQLite persistence foundation/schema for settings and usage.\n- [ ] Migration management.
 - [ ] User and server settings, configuration UI, permissions.
 - [ ] Command help/discovery and usage analytics.
-- [ ] Core commands: ping, echo, coinflip, color.
+- [x] Core commands: ping, echo, coinflip, color.
 - [ ] Utility commands: asciify, translate, weather.
 - [ ] Shared reusable API client, cache and pagination.
-- [ ] Complete Components V2 UX, accessibility and interaction timeouts.
+- [x] Shared base Components V2 response helper.\n- [ ] Complete V2 UX, accessibility and interaction timeouts.
 
 ## Phase 2 — Discord and general utilities
 - [ ] Avatar and banner.
@@ -121,3 +121,5 @@ Complete the original command suite in Rust with Poise/Serenity and Discord Comp
 - Do not circumvent authentication, paywalls, access controls or rate limits.
 - API-dependent features are only complete when they perform real requests, handle failures and are documented; stubs are not completion.
 - Keep all interactive bot replies in Discord Components V2 format.
+
+## Current work snapshot\n- Modular files created: config, database, UI helper and command module.\n- SQLite schema initializes at startup; settings storage has basic methods and a round-trip test.\n- Usage/settings commands still need shared database state wiring and functional UI.\n- Compilation and tests have not yet been run in a Rust environment.\n

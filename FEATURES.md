@@ -75,8 +75,8 @@ Complete the original command suite in Rust with Poise/Serenity and Discord Comp
 
 ## Phase 5 — Social, developer and music integrations
 ### GitHub
-- [ ] Profile.
-- [ ] Repository.
+- [x] Profile.
+- [x] Repository.
 - [ ] Public user lookup, including public account metadata (not private email discovery).
 
 ### Instagram
@@ -97,7 +97,7 @@ Complete the original command suite in Rust with Poise/Serenity and Discord Comp
 
 ### Music/text
 - [ ] Lyrics lookup using licensed/allowed providers and brief excerpts only.
-- [ ] Urban Dictionary lookup.
+- [x] Urban Dictionary lookup.
 
 ## Phase 6 — Crypto and data utilities
 - [ ] Gas prices.

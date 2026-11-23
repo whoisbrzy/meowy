@@ -1,23 +1,29 @@
-# Meowy (Rust)
+# Meowy — Rust rewrite
 
-Meowy is migrating to Rust using Poise (Serenity) and Tokio.
+The project is being rewritten in Rust. The old Node/discord.js runtime is retired.
 
-## Requirements
-- Rust stable toolchain
-- Discord application and bot token
+## Stack
+- Rust stable
+- Poise / Serenity
+- Tokio
+- Reqwest and Serde for API integrations
 
-## Setup
-1. Copy `.env.example` to `.env` and set `DISCORD_TOKEN`.
-2. Invite the bot with the `bot` and `applications.commands` scopes.
-3. Run:
+## Run
+1. Install Rust stable.
+2. Copy `.env.example` to `.env` and set `DISCORD_TOKEN`.
+3. Invite the bot with `bot` and `applications.commands` scopes.
+4. Run `cargo check`, then `cargo run`.
 
-```sh
-cargo check
-cargo run
-```
+## Current implemented commands
+- `/ping`
+- `/echo`
+- `/coinflip rounds`
+- `/color` (text-based hex information, no embed sidebar)
+- `/usage` (stub)
+- `/settings` (stub)
 
-Currently implemented: `/ping`, `/echo`, `/coinflip`, `/color`, `/usage`, `/settings`.
+## Components V2
+The bot avoids legacy embed color/sidebar styling. Responses currently use plain Discord messages; Components V2 layouts will be introduced using the API's component-based message layout rather than embed color bars.
 
-Other commands from the Evade-inspired specification are being migrated and need service integrations and/or credentials. Registered or planned commands are not claimed to be fully functional. Privacy-sensitive or harmful commands are excluded.
-
-Use `cargo fmt` and `cargo check` before committing.
+## Status
+This is an ongoing rewrite. External API-backed features are not yet implemented. Commands involving sensitive attribute inference, nicotine use, invasive tracking, or bypassing platform privacy are excluded or redesigned.

@@ -11,16 +11,17 @@ Modular Rust Discord bot using Poise/Serenity, Tokio, SQLite and Discord Compone
 ## Configuration
 - `DISCORD_TOKEN`: required bot token.
 - `MEOWY_DATABASE_PATH`: optional SQLite path (defaults to `meowy.sqlite3`).
+- `GROQ_API_KEY`: key for Groq AI.
+- `GROQ_API_URL`: optional chat-completions endpoint.
+- `GROQ_MODEL`: optional model (defaults to `llama-3.3-70b-versatile`).
 
 ## Architecture
-- `src/config.rs`: validated environment config.
-- `src/db.rs`: SQLite schema and basic settings/usage storage operations.
+- `src/config.rs`: configuration.
+- `src/db.rs`: SQLite schema and basic storage operations.
 - `src/ui.rs`: shared Components V2 reply helper.
 - `src/commands/`: command modules.
 
-## Current command registrations
-/ping, /echo, /coinflip, /color, /usage, /settings, /avatar, /userinfo, /guildinfo, /ai ask, /ai usage, /ai transcribe, /ai ocr, /minecraft_uuid, /minecraft_server, /roblox_user, /fortnite_news.
+## Registered commands
+Core, Discord utilities, Groq-backed `/ai ask`, gaming lookups, `/github_profile`, `/github_repo`, and `/urban`.
 
-The command suite and integrations remain under active development. No build/test result is asserted until run in a Rust environment.
-
-## API setup\nAI features require an OpenAI-compatible endpoint and API key: `AI_API_KEY`, optionally `AI_API_URL` and `AI_MODEL`. Provider failures are surfaced in V2 replies. OCR/transcription currently have provider configuration placeholders, not completed media processing.\n
+Integrations remain in development; build and runtime validation have not yet been performed. OCR/transcription are placeholders.

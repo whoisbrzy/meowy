@@ -1,9 +1,0 @@
-{
-  "name": "meowy",
-  "version": "0.1.0",
-  "description": "Multipurpose Discord bot inspired by a broad utility command set.",
-  "main": "src/index.js",
-  "scripts": { "start": "node src/index.js", "deploy": "node src/deploy.js" },
-  "dependencies": { "discord.js": "^14.19.3", "dotenv": "^16.4.7" },
-  "engines": { "node": ">=20" }
-}

@@ -15,6 +15,7 @@ async fn main() -> Result<(), Error> {
  commands::discord_utils::avatar(),commands::discord_utils::userinfo(),commands::discord_utils::guildinfo(),
  commands::ai::ask(),commands::ai::ai_usage(),commands::ai::transcribe(),commands::ai::ocr(),
  commands::games::minecraft_uuid(),commands::games::minecraft_server(),commands::games::roblox_user(),commands::games::fortnite_news(),
+ commands::social::github_profile(),commands::social::github_repo(),commands::social::urban(),
  ];
  let framework=poise::Framework::builder().options(poise::FrameworkOptions{commands:commands.clone(),..Default::default()})
  .setup(|ctx,_ready,_framework|Box::pin(async move{
@@ -23,6 +24,7 @@ async fn main() -> Result<(), Error> {
  commands::discord_utils::avatar(),commands::discord_utils::userinfo(),commands::discord_utils::guildinfo(),
  commands::ai::ask(),commands::ai::ai_usage(),commands::ai::transcribe(),commands::ai::ocr(),
  commands::games::minecraft_uuid(),commands::games::minecraft_server(),commands::games::roblox_user(),commands::games::fortnite_news(),
+ commands::social::github_profile(),commands::social::github_repo(),commands::social::urban(),
  ]).await?; tracing::info!("Meowy commands registered");Ok(())})).build();
  let mut client=serenity::ClientBuilder::new(config.discord_token,serenity::GatewayIntents::GUILDS).framework(framework).await?;
  client.start().await?;Ok(())

@@ -1,29 +1,24 @@
 # Meowy — Rust rewrite
 
-The project is being rewritten in Rust. The old Node/discord.js runtime is retired.
+Modular Rust Discord bot using Poise/Serenity, Tokio, SQLite and Discord Components V2.
 
-## Stack
-- Rust stable
-- Poise / Serenity
-- Tokio
-- Reqwest and Serde for API integrations
-
-## Run
-1. Install Rust stable.
+## Setup
+1. Install stable Rust.
 2. Copy `.env.example` to `.env` and set `DISCORD_TOKEN`.
-3. Invite the bot with `bot` and `applications.commands` scopes.
+3. Invite with `bot` and `applications.commands` scopes.
 4. Run `cargo check`, then `cargo run`.
 
-## Current implemented commands
-- `/ping`
-- `/echo`
-- `/coinflip rounds`
-- `/color` (text-based hex information, no embed sidebar)
-- `/usage` (stub)
-- `/settings` (stub)
+## Configuration
+- `DISCORD_TOKEN`: required bot token.
+- `MEOWY_DATABASE_PATH`: optional SQLite path (defaults to `meowy.sqlite3`).
 
-## Components V2
-The bot avoids legacy embed color/sidebar styling. Responses currently use plain Discord messages; Components V2 layouts will be introduced using the API's component-based message layout rather than embed color bars.
+## Architecture
+- `src/config.rs`: validated environment config.
+- `src/db.rs`: SQLite schema and basic settings/usage storage operations.
+- `src/ui.rs`: shared Components V2 reply helper.
+- `src/commands/`: command modules.
 
-## Status
-This is an ongoing rewrite. External API-backed features are not yet implemented. Commands involving sensitive attribute inference, nicotine use, invasive tracking, or bypassing platform privacy are excluded or redesigned.
+## Current command registrations
+/ping, /echo, /coinflip, /color, /usage, /settings.
+
+The command suite and integrations remain under active development. No build/test result is asserted until run in a Rust environment.

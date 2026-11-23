@@ -1,0 +1,1 @@
+module.exports=[...require('../commands'),...require('./utilities'),...require('./advanced')];

@@ -54,3 +54,14 @@ impl Database {
     }
 }
 use rusqlite::OptionalExtension;
+
+#[cfg(test)]
+mod tests {
+    use super::Database;
+    #[test]
+    fn settings_round_trip() {
+        let db = Database::open(":memory:").expect("db");
+        db.set_setting(42, "prefix", "!").expect("save");
+        assert_eq!(db.get_setting(42, "prefix").expect("read"), Some("!".to_string()));
+    }
+}

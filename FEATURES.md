@@ -1,35 +1,14 @@
-# Feature parity checklist
+# Meowy Rust rewrite status
 
-This checklist is based on the feature list supplied by the project owner.
+## Rust core
+- [x] Replace Node runtime and package manifest
+- [x] Rust + Poise/Serenity runtime
+- [x] Basic commands: ping, echo, coinflip, color
+- [ ] Components V2 layout helper and interaction UI
+- [ ] Persistent settings/database
+- [ ] Command modules and API integrations
 
-- [x] /ping
-- [x] /echo
-- [x] /coinflip
-- [x] /color (hex preview)
-- [ ] AI: ask, edit, imagine, OCR, roast, transcribe, TTS, usage
-- [ ] /asciify
-- [ ] /avatar, /banner
-- [ ] Crypto: gas, price, rates, transaction, wallet
-- [ ] Discord: guilds, presence, search, seen, user, voice
-- [ ] Fortnite: cosmetic, map, news, season, shop, stats, weapon
-- [ ] GitHub: 2email, profile, repository
-- [ ] Instagram: post, posts, user
-- [ ] Interact
-- [ ] Last.fm: album, artist, collage, cover, crowns, friends, globalchart, latest, login, logout, love, loved, nowplaying, profile, recap, similar, taste, top, track, unlove, whoknows
-- [ ] /lyrics
-- [ ] Minecraft: body, cape, capes, compare, head, history, server, skin, skins, user, uuid
-- [ ] /quote fake and message quote action
-- [ ] Roblox: game, games, group, groups, history, item, outfits, profile, discord link lookup
-- [ ] Rolimons: chart, profile
-- [ ] /settings
-- [ ] /ship
-- [ ] Spotify: album, artist, preview, track
-- [ ] Telegram: avatars, channel, feeds, gift, gifts, history, id, mutuals, post, stories, user
-- [ ] TikTok: feeds, post, posts, sound, user
-- [ ] Message actions: edit with AI, OCR, transcribe, translate, TTS, quote
-- [ ] /translate, /tts, /urban
-- [ ] Valorant: agents, friends, login, logout, maps, party, profile, shop, skin, weapon
-- [ ] /weather
-- [ ] X: post, user
+## Planned command modules
+AI, ASCII art, avatar/banner, crypto, Discord public profile/server search utilities, Fortnite, GitHub, Instagram public data, Last.fm, lyrics, Minecraft, Roblox, Rolimons, Spotify, Telegram public data, TikTok public data, translation, TTS, weather, Valorant and X.
 
-Some functions depend on provider credentials, platform API access, or user consent. Sensitive-trait guessing and nicotine-promoting features are excluded.
+All third-party integrations require implementation and provider configuration. Features that infer sensitive traits, promote nicotine use, invade privacy or circumvent access controls are excluded or redesigned.

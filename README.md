@@ -21,7 +21,7 @@ Modular Rust Discord bot using Poise/Serenity, Tokio, SQLite and Discord Compone
 - `src/ui.rs`: shared Components V2 reply helper.
 - `src/commands/`: command modules.
 
-## Registered commands
+## Additional integrations\n- Last.fm: recent tracks and top-list lookup (API key).\n- Spotify: metadata search (client credentials).\n- Instagram/TikTok/X/Telegram: public-profile/channel link helper; metadata access is limited and requires approved API access.\n\n## Registered commands
 Core, Discord utilities, Groq-backed `/ai ask`, gaming lookups, `/github_profile`, `/github_repo`, and `/urban`.
 
 Integrations remain in development; build and runtime validation have not yet been performed. OCR/transcription are placeholders.

@@ -80,11 +80,11 @@ Complete the original command suite in Rust with Poise/Serenity and Discord Comp
 - [ ] Public user lookup, including public account metadata (not private email discovery).
 
 ### Instagram
-- [ ] Public profile lookup where supported.
+- [x] Public profile link helper (API metadata access pending).
 - [ ] Public post lookup where supported.
 
 ### TikTok, X and Telegram
-- [ ] Public profile/post/content lookup, subject to provider access and platform restrictions.
+- [x] Public profile link helpers; API-based content retrieval pending, subject to platform access.
 
 ### Last.fm
 - [ ] User.
@@ -93,7 +93,7 @@ Complete the original command suite in Rust with Poise/Serenity and Discord Comp
 - [ ] Track, artist and album info.
 
 ### Spotify
-- [ ] Track, artist, album and playlist metadata as supported by official API.
+- [x] Search for track, artist and album metadata (OAuth client credentials required).\n- [ ] Playlist metadata.
 
 ### Music/text
 - [ ] Lyrics lookup using licensed/allowed providers and brief excerpts only.

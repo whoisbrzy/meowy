@@ -21,8 +21,8 @@ Complete the original command suite in Rust with Poise/Serenity and Discord Comp
 - [x] Shared base Components V2 response helper.\n- [ ] Complete V2 UX, accessibility and interaction timeouts.
 
 ## Phase 2 — Discord and general utilities
-- [ ] Avatar and banner.
-- [ ] Public user and guild/server lookup.
+- [x] Avatar lookup.\n- [ ] Banner lookup.
+- [x] Userinfo and guild/server info (cache-limited).
 - [ ] Server search and Discord-to-Roblox lookup.
 - [ ] Permission-aware voice features and limited visible presence.
 - [ ] Quote/message quote and clearly marked fake quote.
@@ -30,10 +30,10 @@ Complete the original command suite in Rust with Poise/Serenity and Discord Comp
 - [ ] Ship feature, framed as playful non-sensitive entertainment.
 
 ## Phase 3 — AI and media tools
-- [ ] AI ask/chat.
+- [x] AI ask/chat (OpenAI-compatible endpoint).
 - [ ] Imagine and image editing.
-- [ ] OCR/extract text.
-- [ ] Transcription.
+- [ ] OCR/extract text (placeholder; processing pending).
+- [ ] Transcription (placeholder; processing pending).
 - [ ] Translation/context-menu translation.
 - [ ] TTS.
 - [ ] AI roast with safeguards.
@@ -58,12 +58,12 @@ Complete the original command suite in Rust with Poise/Serenity and Discord Comp
 - [ ] Cape/capes.
 - [ ] Compare.
 - [ ] History.
-- [ ] Server.
+- [x] Minecraft server status lookup.
 - [ ] Skin/skins.
-- [ ] User and UUID.
+- [x] Minecraft username-to-UUID lookup.
 
 ### Roblox
-- [ ] User and profile.
+- [x] Roblox username lookup.
 - [ ] Avatar.
 - [ ] Game and server utilities.
 - [ ] Other original list functions using documented public APIs.
@@ -123,3 +123,10 @@ Complete the original command suite in Rust with Poise/Serenity and Discord Comp
 - Keep all interactive bot replies in Discord Components V2 format.
 
 ## Current work snapshot\n- Modular files created: config, database, UI helper and command module.\n- SQLite schema initializes at startup; settings storage has basic methods and a round-trip test.\n- Usage/settings commands still need shared database state wiring and functional UI.\n- Compilation and tests have not yet been run in a Rust environment.\n
+## Recent progress (Phase 2-4 partial)
+- Registered Discord avatar/user/server lookup commands.
+- Added configurable AI chat command.
+- Added OCR and transcription placeholders.
+- Added Minecraft username UUID and server status lookups, plus Roblox username lookup.
+- Fortnite news remains a placeholder; other gaming integrations pending.
+- Compilation/runtime validation has not been performed.

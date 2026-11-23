@@ -1,17 +1,23 @@
-# Meowy
+# Meowy (Rust)
 
-A Discord utility bot project. This repository is the implementation home for the command specification supplied in chat.
+Meowy is migrating to Rust using Poise (Serenity) and Tokio.
+
+## Requirements
+- Rust stable toolchain
+- Discord application and bot token
 
 ## Setup
-1. Install Node.js 20+.
-2. Run `npm install`.
-3. Create `.env` with `DISCORD_TOKEN`, `CLIENT_ID`, and optionally `GUILD_ID`.
-4. Run `npm run deploy` to register commands (guild registration if `GUILD_ID` is set, global otherwise).
-5. Run `npm start`.
+1. Copy `.env.example` to `.env` and set `DISCORD_TOKEN`.
+2. Invite the bot with the `bot` and `applications.commands` scopes.
+3. Run:
 
-External APIs (AI, Last.fm, Spotify, game data, crypto, etc.) require separate providers and credentials. See `.env.example`.
+```sh
+cargo check
+cargo run
+```
 
-## Scope
-The supplied feature list is tracked in `FEATURES.md`. The initial build includes the Discord command framework and some local commands. Feature integrations will be added as credentials and provider choices are configured.
+Currently implemented: `/ping`, `/echo`, `/coinflip`, `/color`, `/usage`, `/settings`.
 
-Commands that infer sensitive traits, invade privacy, or promote nicotine use are intentionally excluded or redesigned.
+Other commands from the Evade-inspired specification are being migrated and need service integrations and/or credentials. Registered or planned commands are not claimed to be fully functional. Privacy-sensitive or harmful commands are excluded.
+
+Use `cargo fmt` and `cargo check` before committing.

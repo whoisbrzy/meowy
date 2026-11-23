@@ -1,0 +1,8 @@
+{
+  "name":"meowy",
+  "version":"1.0.0",
+  "description":"Meowy Discord bot",
+  "main":"src/index.js",
+  "scripts":{"start":"node src/index.js"},
+  "dependencies":{"discord.js":"^14.19.3","dotenv":"^16.4.7","better-sqlite3":"^11.8.1"}
+}

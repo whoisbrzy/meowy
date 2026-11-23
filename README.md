@@ -19,6 +19,8 @@ Modular Rust Discord bot using Poise/Serenity, Tokio, SQLite and Discord Compone
 - `src/commands/`: command modules.
 
 ## Current command registrations
-/ping, /echo, /coinflip, /color, /usage, /settings.
+/ping, /echo, /coinflip, /color, /usage, /settings, /avatar, /userinfo, /guildinfo, /ai ask, /ai usage, /ai transcribe, /ai ocr, /minecraft_uuid, /minecraft_server, /roblox_user, /fortnite_news.
 
 The command suite and integrations remain under active development. No build/test result is asserted until run in a Rust environment.
+
+## API setup\nAI features require an OpenAI-compatible endpoint and API key: `AI_API_KEY`, optionally `AI_API_URL` and `AI_MODEL`. Provider failures are surfaced in V2 replies. OCR/transcription currently have provider configuration placeholders, not completed media processing.\n
